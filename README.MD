@@ -29,7 +29,7 @@ The system uses BeamData knowledge assets, proposal documents, tender documents,
 ## System Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph ING["① Knowledge Base Build — offline (src.build_kb)"]
         direction TB
         SRC["📁 Source Documents<br/>PDF · DOCX · Excel"]
