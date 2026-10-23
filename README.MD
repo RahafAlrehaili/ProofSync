@@ -116,7 +116,7 @@ LLM_MODEL = "gpt-4o-mini"
 - Citation support
 
 ### DOCX Pipeline
-- python-docx
+- Docling (DocumentConverter)
 - Section-aware parsing
 - Proposal structure preservation
 
