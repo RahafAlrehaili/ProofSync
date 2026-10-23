@@ -1,5 +1,23 @@
 # RFP Intelligence System
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?logo=langchain&logoColor=white" alt="LangChain">
+  <img src="https://img.shields.io/badge/OpenAI-GPT--4o--mini-412991" alt="OpenAI GPT-4o-mini">
+  <img src="https://img.shields.io/badge/ChromaDB-Vector%20Store-FF6446" alt="ChromaDB">
+  <img src="https://img.shields.io/badge/Hugging%20Face-Sentence%20Transformers-FFD21E?logo=huggingface&logoColor=black" alt="Sentence Transformers">
+  <img src="https://img.shields.io/badge/Pydantic-E92063?logo=pydantic&logoColor=white" alt="Pydantic">
+  <br>
+  <img src="https://img.shields.io/badge/Retrieval-Hybrid%20%7C%20BM25-2E7D32" alt="Hybrid Retrieval">
+  <img src="https://img.shields.io/badge/Reranker-Cross--Encoder-6A1B9A" alt="Cross-Encoder Reranker">
+  <img src="https://img.shields.io/badge/Evaluation-RAGAS-0277BD" alt="RAGAS">
+  <img src="https://img.shields.io/badge/Docling-DOCX%20Parsing-5E35B1" alt="Docling">
+  <img src="https://img.shields.io/badge/Parsing-pdfplumber%20%7C%20openpyxl-546E7A" alt="pdfplumber and openpyxl">
+  <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
+</p>
+
 ## Overview
 
 The RFP Intelligence System is a Retrieval-Augmented Generation (RAG) platform designed to help proposal teams search organizational knowledge, retrieve supporting evidence, and generate grounded RFP responses.
