@@ -30,34 +30,19 @@ The system uses BeamData knowledge assets, proposal documents, tender documents,
 
 ```mermaid
 flowchart TB
-    subgraph ING["① Knowledge Base Build — offline (src.build_kb)"]
+    subgraph ING["① Build — offline"]
         direction TB
-        SRC["📁 Source Documents<br/>PDF · DOCX · Excel"]
-        PARSE["Multi-Format Parsing<br/>pdfplumber · Docling · openpyxl"]
-        CLEAN["Cleaning & Metadata<br/>footers · tags · section paths"]
-        MASK["🔒 PII Masking<br/>LLM + regex validation"]
-        CHUNK["Recursive Chunking<br/>800 chars · 150 overlap"]
-        EMB["Embeddings<br/>all-MiniLM-L6-v2"]
-        DB[("ChromaDB<br/>vector store")]
-        JSON[("kb_documents.json<br/>for BM25")]
-
-        SRC --> PARSE --> CLEAN --> MASK --> CHUNK
-        CHUNK --> EMB --> DB
-        CHUNK --> JSON
+        SRC["📁 PDF · DOCX · Excel"] --> PARSE["Parsing"] --> CLEAN["Cleaning & Metadata"]
+        CLEAN --> MASK["🔒 PII Masking"] --> CHUNK["Chunking"]
+        CHUNK --> EMB["Embeddings"] --> DB[("ChromaDB")]
+        CHUNK --> JSON[("kb_documents.json")]
     end
 
-    subgraph QRY["② Query — online (FastAPI)"]
+    subgraph QRY["② Query — online"]
         direction TB
-        Q["💬 User question<br/>/api/qa · /api/draft"]
-        SEM["Semantic search"]
-        BM["BM25 keyword search"]
-        HYB["Hybrid score fusion<br/>K = 40 candidates"]
-        RR["Cross-Encoder Reranking<br/>keep Top 5"]
-        LLM["GPT-4o-mini"]
-        ANS["✅ Answer with citations [1] [2]"]
-
-        Q --> SEM & BM
-        SEM & BM --> HYB --> RR --> LLM --> ANS
+        Q["💬 Question"] --> SEM["Semantic"] & BM["BM25"]
+        SEM & BM --> HYB["Hybrid · K=40"] --> RR["Reranker · Top 5"]
+        RR --> LLM["GPT-4o-mini"] --> ANS["✅ Cited answer"]
     end
 
     DB -.-> SEM
