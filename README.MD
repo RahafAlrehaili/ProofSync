@@ -236,6 +236,8 @@ Each experiment in `data/eval_runs/` has three files: `_summary.csv` (averages),
 
 ## Setup
 
+Requires **Python 3.11** (tested with 3.11.9).
+
 ```bash
 git clone https://github.com/RahafAlrehaili/rfp-intelligence.git
 cd rfp-intelligence
@@ -244,7 +246,8 @@ python -m venv .venv
 .venv\Scripts\activate        # Windows
 # source .venv/bin/activate   # macOS / Linux
 
-pip install -r requirements.txt
+pip install -r requirements-lock.txt   # exact tested versions (recommended)
+# pip install -r requirements.txt      # direct dependencies, latest compatible versions
 
 copy .env.example .env        # Windows
 # cp .env.example .env        # macOS / Linux
