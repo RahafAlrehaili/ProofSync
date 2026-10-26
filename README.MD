@@ -1,4 +1,4 @@
-# RFP Intelligence System
+# ProofSync – RFP Intelligence System
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
@@ -54,7 +54,7 @@ flowchart TB
 ## Project Structure
 
 ```text
-rfp-intelligence/
+ProofSync/
 ├── _source_data/
 ├── data/
 │   ├── chroma_db/
@@ -239,9 +239,8 @@ Each experiment in `data/eval_runs/` has three files: `_summary.csv` (averages),
 Requires **Python 3.11** (tested with 3.11.9).
 
 ```bash
-git clone https://github.com/RahafAlrehaili/rfp-intelligence.git
-cd rfp-intelligence
-
+git clone https://github.com/RahafAlrehaili/ProofSync.git
+cd ProofSync
 python -m venv .venv
 .venv\Scripts\activate        # Windows
 # source .venv/bin/activate   # macOS / Linux
